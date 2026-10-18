@@ -6,7 +6,7 @@ const LINKEDIN = "https://www.linkedin.com/in/muzammil09/";
 
 export function Contact() {
   return (
-    <section id="contact" className="fold-band">
+    <section id="contact" className="fold-band pb-8">
       <div className="max-w-6xl mx-auto">
         <div className="section-heading">
           <h2 className="section-title">
