@@ -14,8 +14,7 @@ export function Contact() {
           </h2>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-2xl mx-auto">
-            I welcome the opportunity to connect and discuss potential projects,
-            creative ideas, or how I can contribute to your vision.
+            Always happy to talk about engineering leadership, building with AI, or B2B SaaS product strategy.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 gap-12">

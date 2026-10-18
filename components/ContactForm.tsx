@@ -1,17 +1,19 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { CheckCircle2, Send, XCircle } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 const EMAIL = "muzammilshahid.gt@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/muzammil09/";
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+type Status = "idle" | "pending" | "success" | "error";
 
 export function ContactForm() {
-  const [pending, setPending] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setPending(true);
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
@@ -19,16 +21,36 @@ export function ContactForm() {
     const subject = String(data.get("subject") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
-    const body = [
-      `From: ${name}`,
-      `Reply-To: ${from}`,
-      "",
-      message,
-    ].join("\n");
+    // Fallback: open the visitor's mail client if no form service is configured
+    if (!WEB3FORMS_KEY) {
+      const body = [`From: ${name}`, `Reply-To: ${from}`, "", message].join("\n");
+      window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return;
+    }
 
-    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setPending(false);
+    setStatus("pending");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name,
+          email: from,
+          subject,
+          message,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -77,12 +99,25 @@ export function ContactForm() {
         </div>
         <button
           type="submit"
-          disabled={pending}
-          className="w-full px-8 py-3 bg-primary-600 hover:bg-primary-700 disabled:bg-primary-800 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2"
+          disabled={status === "pending"}
+          className="w-full px-8 py-3 bg-primary-600 hover:bg-primary-700 disabled:bg-primary-800 disabled:cursor-not-allowed text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2"
         >
           <Send className="w-5 h-5" />
-          Send Message
+          {status === "pending" ? "Sending..." : "Send Message"}
         </button>
+        {status === "success" && (
+          <div className="flex items-center gap-2 p-4 bg-green-600/10 border border-green-600/30 rounded-lg text-green-400 text-sm">
+            <CheckCircle2 className="w-5 h-5 shrink-0" />
+            Message sent successfully! I&apos;ll get back to you soon.
+          </div>
+        )}
+        {status === "error" && (
+          <div className="flex items-center gap-2 p-4 bg-red-600/10 border border-red-600/30 rounded-lg text-red-400 text-sm">
+            <XCircle className="w-5 h-5 shrink-0" />
+            Something went wrong. Please try again or email me directly at{" "}
+            {EMAIL}.
+          </div>
+        )}
       </form>
       <div className="mt-6 pt-6 border-t border-dark-600">
         <p className="text-dark-400 text-sm text-center">

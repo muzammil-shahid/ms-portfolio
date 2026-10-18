@@ -27,6 +27,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset anchor targets below the fixed header, with a little extra breathing room */
+section[id] {
+  scroll-margin-top: 50px;
+}
+
 body {
   background-color: var(--canvas);
   color: var(--text-default);

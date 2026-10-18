@@ -25,21 +25,27 @@ export function Hero() {
               I&apos;m <span className="gradient-text">Muzammil.</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-dark-300 font-light">
-              Software Engineer
+              Software Engineering Lead
             </h2>
           </div>
           <p className="body-lead max-w-4xl mx-auto">
-            Bringing over 8+ years of expertise in building scalable web
-            applications, where I combine strong coding practices with a focus on
-            usability. My expertise spans technologies such as{" "}
+            I help B2B SaaS and enterprise teams turn ambiguous product
+            engineering problems into shipped, high-performing outcomes. Over
+            the past 10+ years, I&apos;ve led frontend architecture, scaled web
+            performance, and built full-stack applications serving global users
+            with technologies such as{" "}
             <span className="text-primary-500 font-semibold">
               React, TypeScript, Next.js, Redux, WordPress, and PHP
             </span>
-            , ensuring both powerful functionality and seamless user flows.
-            Currently, I am leading a team of over 10+ engineers at DigitalOcean,
-            dedicated to creating intuitive, high-impact interfaces that drive
-            tangible business outcomes. In my spare time, I enjoy playing chess,
-            snooker, and table tennis.
+            . My engineering leadership and technical contributions were part of
+            the journey that led to Cloudways{" "}
+            <span className="text-primary-500 font-semibold">
+              $350M acquisition by DigitalOcean
+            </span>
+            . Currently, I am leading a team of over 10+ engineers at
+            DigitalOcean, dedicated to creating intuitive, high-impact
+            interfaces that drive tangible business outcomes. In my spare time,
+            I enjoy playing chess, snooker, and table tennis.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-dark-400">
             <div className="flex items-center gap-2">
@@ -80,7 +86,7 @@ export function Hero() {
       </div>
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow text-dark-500 hover:text-primary-500 transition-colors duration-300"
+        className="absolute bottom-4 left-1/2 ![transform:translateX(-50%)] animate-bounce-slow text-dark-500 hover:text-primary-500 transition-colors duration-300"
         aria-label="Scroll to About"
       >
         <ChevronDown size={24} />

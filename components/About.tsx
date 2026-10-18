@@ -14,7 +14,7 @@ const highlights = [
   {
     icon: Award,
     title: "Full-Stack Expertise",
-    body: "8+ years experience in developing web apps, including React, TypeScript, Node.js, PHP, Custom WordPress Development and more.",
+    body: "10+ years experience in developing web apps, including React, TypeScript, Node.js, PHP, Custom WordPress Development and more.",
   },
   {
     icon: Target,

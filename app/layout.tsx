@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Muzammil - Software Engineer",
+  title: "Muhammad Muzammil - Software Engineering Leader",
   description:
-    "Software Engineer at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
+    "Software Engineering Leader at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
   authors: [{ name: "Muhammad Muzammil" }],
   keywords: [
     "Muhammad Muzammil",
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "DigitalOcean",
   ],
   openGraph: {
-    title: "Muhammad Muzammil - Software Engineer",
+    title: "Muhammad Muzammil - Software Engineering Leader",
     description:
-      "Software Engineer at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
+      "Software Engineering Leader at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Muhammad Muzammil - Software Engineer",
+    title: "Muhammad Muzammil - Software Engineering Leader",
     description:
-      "Software Engineer at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
+      "Software Engineering Leader at Cloudways - DigitalOcean | Javascript / ReactJs / NextJs / Redux / Laravel / WordPress",
   },
 };
 

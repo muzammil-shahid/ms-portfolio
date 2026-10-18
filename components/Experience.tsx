@@ -14,9 +14,9 @@ const jobs: Job[] = [
     title: "Engineering Manager",
     company: "DigitalOcean",
     location: "Karachi, PK",
-    period: "03/2025 - Present",
+    period: "03/2026 - Present",
     summary:
-      "Leading frontend architecture for the Cloudways Unified platform and partnering across backend, design, and QA to ship high-quality, performant experiences.",
+      "Drives frontend architecture for the Cloudways Unified platform, collaborating cross-functionally across backend, design, and QA to deliver high-performing, enterprise-grade user experiences.",
     bullets: [
       "Leading the frontend architecture for the Cloudways Unified platform, designing scalable and maintainable solutions",
       "Developing and implementing user-facing features to improve usability, performance, and overall platform experience",
@@ -30,9 +30,9 @@ const jobs: Job[] = [
     title: "Lead Software Engineer",
     company: "DigitalOcean",
     location: "Karachi, PK",
-    period: "09/2022 - 03/2025",
+    period: "09/2022 - 03/2026",
     summary:
-      "Led a team of more than 10 engineers in the development of scalable applications, resulting in increased department productivity.",
+      "Led a team of 10+ engineers building scalable applications, driving measurable gains in department productivity and delivery velocity.",
     bullets: [
       "Successfully implemented a micro frontend architecture utilizing module federation",
       "Migrated a legacy AngularJS application to a modern React functional architecture",
@@ -46,7 +46,7 @@ const jobs: Job[] = [
     location: "Karachi, PK",
     period: "03/2018 - 08/2022",
     summary:
-      "Led a team of multiple software engineers, while also serving as a Front-end Developer at Cloudways.",
+      "Managed a cross-functional team of software engineers while maintaining hands-on frontend development at Cloudways.",
     bullets: [
       "Specialized in modern front-end technologies, including React.js, Redux, RTK Query, TypeScript, and Tailwind CSS",
       "Translated UX wireframes and mockups into highly responsive and interactive web features",
