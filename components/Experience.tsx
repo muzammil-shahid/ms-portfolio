@@ -11,10 +11,26 @@ type Job = {
 
 const jobs: Job[] = [
   {
+    title: "Engineering Manager",
+    company: "DigitalOcean",
+    location: "Karachi, PK",
+    period: "03/2025 - Present",
+    summary:
+      "Leading frontend architecture for the Cloudways Unified platform and partnering across backend, design, and QA to ship high-quality, performant experiences.",
+    bullets: [
+      "Leading the frontend architecture for the Cloudways Unified platform, designing scalable and maintainable solutions",
+      "Developing and implementing user-facing features to improve usability, performance, and overall platform experience",
+      "Collaborating closely with backend, design, and QA teams to ensure seamless integration and high-quality releases",
+      "Optimizing frontend code for performance, scalability, and responsiveness across devices and browsers",
+      "Managing deployment processes and CI/CD pipelines using GitHub Actions to automate builds, tests, and releases efficiently",
+      "Contributing to best practices in frontend development, including code reviews, modular architecture, and reusable components",
+    ],
+  },
+  {
     title: "Lead Software Engineer",
     company: "DigitalOcean",
     location: "Karachi, PK",
-    period: "09/2022 - Present",
+    period: "09/2022 - 03/2025",
     summary:
       "Led a team of more than 10 engineers in the development of scalable applications, resulting in increased department productivity.",
     bullets: [
@@ -81,15 +97,15 @@ const jobs: Job[] = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 section-padding">
+    <section id="experience" className="fold-base">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="section-heading">
+          <h2 className="section-title">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto" />
+          <div className="section-rule" />
         </div>
-        <div className="space-y-8 md:ml-2">
+        <div className="space-y-8">
           {jobs.map((job) => (
             <div
               key={`${job.company}-${job.period}`}
@@ -100,7 +116,7 @@ export function Experience() {
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="md:col-span-1">
-                  <h3 className="text-xl font-bold text-primary-400 mb-2">
+                  <h3 className="text-xl font-bold text-dark-200 mb-2">
                     {job.title}
                   </h3>
                   <div className="flex items-center gap-2 mb-2">

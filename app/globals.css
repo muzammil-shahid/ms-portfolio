@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+/*
+  Tokens aligned with production https://www.muzammilshahid.com/
+  — dark canvas (#0a0a0a), slate bands (dark-900/50), blue→purple accents.
+*/
+:root {
+  --canvas: #0a0a0a;
+  --fold-band: hsla(0, 0%, 9%, 0.5);
+  --accent-from: #3b82f6;
+  --accent-to: #9333ea;
+  --accent-mid: #8b5cf6;
+  --text-default: #fafafa;
+  --text-muted: #a3a3a3;
+  --text-soft: #d4d4d4;
+}
 
 * {
   margin: 0;
@@ -15,10 +28,11 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #fafafa;
-  font-family: Inter, sans-serif;
+  background-color: var(--canvas);
+  color: var(--text-default);
+  font-family: var(--font-sans), Inter, system-ui, sans-serif;
   line-height: 1.6;
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
 ::-webkit-scrollbar {
@@ -44,7 +58,7 @@ body {
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, var(--accent-from), var(--accent-mid));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -62,5 +76,40 @@ body {
 
   .section-padding {
     @apply px-6 md:px-12 lg:px-24;
+  }
+
+  /* Full-viewport hero (matches live home fold) */
+  .fold-hero {
+    @apply relative min-h-screen flex items-center section-padding pt-20;
+  }
+
+  /* Standard section on canvas */
+  .fold-base {
+    @apply py-20 section-padding;
+  }
+
+  /* Alternating band — About, Skills, Contact on live site */
+  .fold-band {
+    @apply py-20 section-padding bg-dark-900/50;
+  }
+
+  .section-heading {
+    @apply text-center mb-16;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6 tracking-tight text-dark-50;
+  }
+
+  .section-rule {
+    @apply w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto;
+  }
+
+  .body-lead {
+    @apply text-lg md:text-xl text-dark-400 leading-relaxed;
+  }
+
+  .body-copy {
+    @apply text-dark-400 leading-relaxed;
   }
 }

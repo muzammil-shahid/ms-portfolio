@@ -25,13 +25,13 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 section-padding bg-dark-900/50">
+    <section id="about" className="fold-band">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="section-heading">
+          <h2 className="section-title">
             About <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto" />
+          <div className="section-rule" />
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

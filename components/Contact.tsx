@@ -6,14 +6,14 @@ const LINKEDIN = "https://www.linkedin.com/in/muzammil09/";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 section-padding bg-dark-900/50">
+    <section id="contact" className="fold-band">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="section-heading">
+          <h2 className="section-title">
             Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto mb-6" />
-          <p className="text-dark-400 max-w-2xl mx-auto">
+          <div className="section-rule mb-6" />
+          <p className="body-copy max-w-2xl mx-auto">
             I welcome the opportunity to connect and discuss potential projects,
             creative ideas, or how I can contribute to your vision.
           </p>

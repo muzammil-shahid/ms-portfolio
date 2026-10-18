@@ -27,12 +27,16 @@ const tools: Skill[] = [
   { letter: "G", color: "bg-orange-700", name: "Git" },
   { letter: "C", color: "bg-green-700", name: "CI/CD" },
   { letter: "D", color: "bg-blue-600", name: "Docker" },
+  { letter: "GA", color: "bg-orange-500", name: "Google Analytics" },
+  { letter: "M", color: "bg-purple-600", name: "Mixpanel" },
+  { letter: "O", color: "bg-[#2b2937]", name: "OmniConvert" },
+  { letter: "N", color: "bg-teal-600", name: "New Relic" },
 ];
 
 function SkillGrid({ title, skills }: { title: string; skills: Skill[] }) {
   return (
     <div className="bg-dark-800/30 rounded-xl p-6 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover">
-      <h3 className="text-xl font-semibold text-primary-400 mb-6">{title}</h3>
+      <h3 className="text-xl font-semibold text-dark-200 mb-6">{title}</h3>
       <div className="grid grid-cols-2 gap-3">
         {skills.map((s) => (
           <div
@@ -44,7 +48,7 @@ function SkillGrid({ title, skills }: { title: string; skills: Skill[] }) {
             >
               {s.letter}
             </div>
-            <span className="text-dark-200 font-medium text-sm group-hover:text-primary-400 transition-colors">
+            <span className="text-dark-200 font-medium text-sm transition-colors">
               {s.name}
             </span>
           </div>
@@ -71,21 +75,21 @@ const strengths = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 section-padding bg-dark-900/50">
+    <section id="skills" className="fold-band">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="section-heading">
+          <h2 className="section-title">
             Skills & <span className="gradient-text">Expertise</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto" />
+          <div className="section-rule" />
         </div>
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <SkillGrid title="Frontend Technologies" skills={frontend} />
           <SkillGrid title="Backend & Database" skills={backend} />
-          <SkillGrid title="Tools & Platforms" skills={tools} />
+          <SkillGrid title="Tools, Platforms & Analytics" skills={tools} />
         </div>
         <div className="bg-dark-800/30 rounded-xl p-8 border border-dark-700">
-          <h3 className="text-2xl font-semibold text-primary-400 mb-6 text-center">
+          <h3 className="text-2xl font-semibold text-dark-200 mb-6 text-center">
             Professional Strengths
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -94,7 +98,7 @@ export function Skills() {
                 key={s.title}
                 className="p-6 bg-dark-700/50 rounded-xl border border-dark-600 hover:border-primary-500/50 transition-all duration-300 card-hover text-center"
               >
-                <h4 className="text-xl font-semibold text-primary-400 mb-3">
+                <h4 className="text-xl font-semibold text-dark-200 mb-3">
                   {s.title}
                 </h4>
                 <p className="text-dark-400 leading-relaxed text-sm">{s.body}</p>

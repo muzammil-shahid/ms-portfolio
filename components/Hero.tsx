@@ -3,10 +3,7 @@ import { ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 
 export function Hero() {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center section-padding pt-20"
-    >
+    <section id="home" className="fold-hero">
       <div className="w-full max-w-6xl mx-auto">
         <div className="text-center space-y-8 animate-fade-in">
           <div className="relative w-32 h-32 mx-auto mb-8">
@@ -31,7 +28,7 @@ export function Hero() {
               Software Engineer
             </h2>
           </div>
-          <p className="text-lg md:text-xl text-dark-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="body-lead max-w-4xl mx-auto">
             Bringing over 8+ years of expertise in building scalable web
             applications, where I combine strong coding practices with a focus on
             usability. My expertise spans technologies such as{" "}

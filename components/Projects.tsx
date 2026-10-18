@@ -109,13 +109,13 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 section-padding">
+    <section id="projects" className="fold-base">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="section-heading">
+          <h2 className="section-title">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto" />
+          <div className="section-rule" />
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {projects.map((p) => (
@@ -137,9 +137,9 @@ export function Projects() {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <h3 className="text-2xl font-bold text-dark-100 mb-4 group-hover:text-primary-400 transition-colors duration-300 flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-dark-100 mb-4 group-hover:text-dark-200 transition-colors duration-300 flex items-center gap-2">
                   {p.title}
-                  <ExternalLink className="w-5 h-5 text-dark-400 group-hover:text-primary-400 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <ExternalLink className="w-5 h-5 text-dark-400 group-hover:text-dark-200 transition-all duration-300 transform group-hover:translate-x-1" />
                 </h3>
               </a>
               <p className="text-dark-400 mb-6 leading-relaxed">{p.description}</p>
