@@ -11,7 +11,7 @@ export function Hero() {
               <div className="w-full h-full rounded-full overflow-hidden bg-dark-950">
                 <Image
                   src="/img/muzammilshahid.png"
-                  alt="Muhammad Muzammil - Software Engineer"
+                  alt="Muhammad Muzammil - Software Engineering Leader"
                   width={128}
                   height={128}
                   className="w-full h-full object-cover"

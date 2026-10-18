@@ -58,6 +58,9 @@ export function ContactForm() {
       <h3 className="text-2xl font-semibold text-dark-100 mb-6">Send Message</h3>
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
+          <label htmlFor="name" className="sr-only">
+            Your full name
+          </label>
           <input
             type="text"
             id="name"
@@ -68,6 +71,9 @@ export function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor="email" className="sr-only">
+            Your email address
+          </label>
           <input
             type="email"
             id="email"
@@ -78,6 +84,9 @@ export function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor="subject" className="sr-only">
+            Subject
+          </label>
           <input
             type="text"
             id="subject"
@@ -88,6 +97,9 @@ export function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor="message" className="sr-only">
+            Your message
+          </label>
           <textarea
             id="message"
             name="message"
