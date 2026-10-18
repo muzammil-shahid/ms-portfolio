@@ -9,7 +9,7 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-const SITE_URL = "https://www.muzammilshahid.com";
+const SITE_URL = "https://muzammilshahid.com";
 const TITLE = "Muhammad Muzammil - Software Engineering Leader";
 const DESCRIPTION =
   "Software Engineering Leader at Cloudways - DigitalOcean with 10+ years in React, TypeScript, Next.js, and PHP. Leading 10+ engineers, AI-augmented development, and frontend architecture behind Cloudways' $350M acquisition.";
