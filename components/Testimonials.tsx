@@ -49,26 +49,6 @@ const testimonials: Testimonial[] = [
 // Cards are rendered twice so the track can wrap around seamlessly
 const loop = [...testimonials, ...testimonials];
 
-// schema.org Review structured data, built from the same testimonial list
-const reviewsJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": testimonials.map((t) => ({
-    "@type": "Review",
-    reviewBody: t.text,
-    author: {
-      "@type": "Person",
-      name: t.name,
-      jobTitle: t.role,
-      url: t.profile,
-    },
-    itemReviewed: {
-      "@type": "Person",
-      name: "Muhammad Muzammil",
-      url: "https://muzammilshahid.com",
-    },
-  })),
-};
-
 export function Testimonials() {
   const trackRef = useRef<HTMLDivElement>(null);
   const pausedRef = useRef(false);
@@ -111,10 +91,6 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="fold-band">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
-      />
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
