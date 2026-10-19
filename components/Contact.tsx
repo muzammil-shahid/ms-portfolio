@@ -1,14 +1,15 @@
-import { ExternalLink, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
 const EMAIL = "muzammilshahid.gt@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/muzammil09/";
+const GITHUB = "https://github.com/muzammil-shahid";
 
 export function Contact() {
   return (
-    <section id="contact" className="fold-band pb-8">
+    <section id="contact" className="fold-base pb-8">
       <div className="max-w-6xl mx-auto">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
@@ -18,7 +19,7 @@ export function Contact() {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1" data-reveal>
             <h3 className="text-2xl font-semibold text-dark-100 mb-8">
               Contact Information
             </h3>
@@ -72,16 +73,24 @@ export function Contact() {
                   href={LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25"
+                  aria-label="LinkedIn profile"
+                  className="w-11 h-11 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
                 >
                   <Linkedin className="w-5 h-5" />
-                  <span>LinkedIn</span>
-                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <a
+                  href={GITHUB}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  className="w-11 h-11 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
+                >
+                  <Github className="w-5 h-5" />
                 </a>
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2" data-reveal data-reveal-delay={150}>
             <ContactForm />
           </div>
         </div>

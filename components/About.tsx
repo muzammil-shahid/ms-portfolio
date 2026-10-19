@@ -27,14 +27,14 @@ export function About() {
   return (
     <section id="about" className="fold-band">
       <div className="max-w-6xl mx-auto">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="section-rule" />
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6" data-reveal>
             <h3 className="text-2xl md:text-2xl font-semibold text-dark-100">
               Lead Software Engineer & Technical Leader
             </h3>
@@ -58,20 +58,23 @@ export function About() {
               through direct team lead experience, and excel in fostering
               collaborative environments through effective communication. A
               dedicated team player with a passion for continuous learning and
-              professional growth.
+              professional growth. Away from the keyboard, I enjoy a good game
+              of chess, snooker, or table tennis.
             </p>
             <a
               href="/Resume-MuzammilShahid.pdf"
               download="Resume-MuzammilShahid.pdf"
-              className="inline-block px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25"
+              className="btn-primary px-8 py-3"
             >
               Download Resume
             </a>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
-            {highlights.map(({ icon: Icon, title, body }) => (
+            {highlights.map(({ icon: Icon, title, body }, i) => (
               <div
                 key={title}
+                data-reveal
+                data-reveal-delay={i * 100}
                 className="p-6 bg-dark-800/50 rounded-xl border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
               >
                 <div className="text-primary-500 mb-4">

@@ -33,9 +33,21 @@ const tools: Skill[] = [
   { letter: "N", color: "bg-teal-600", name: "New Relic" },
 ];
 
-function SkillGrid({ title, skills }: { title: string; skills: Skill[] }) {
+function SkillGrid({
+  title,
+  skills,
+  delay = 0,
+}: {
+  title: string;
+  skills: Skill[];
+  delay?: number;
+}) {
   return (
-    <div className="bg-dark-800/30 rounded-xl p-6 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover">
+    <div
+      data-reveal
+      data-reveal-delay={delay}
+      className="bg-dark-800/30 rounded-xl p-6 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
+    >
       <h3 className="text-xl font-semibold text-dark-200 mb-6">{title}</h3>
       <div className="grid grid-cols-2 gap-3">
         {skills.map((s) => (
@@ -77,7 +89,7 @@ export function Skills() {
   return (
     <section id="skills" className="fold-band">
       <div className="max-w-6xl mx-auto">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             Skills & <span className="gradient-text">Expertise</span>
           </h2>
@@ -85,10 +97,14 @@ export function Skills() {
         </div>
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <SkillGrid title="Frontend Technologies" skills={frontend} />
-          <SkillGrid title="Backend & Database" skills={backend} />
-          <SkillGrid title="Tools, Platforms & Analytics" skills={tools} />
+          <SkillGrid title="Backend & Database" skills={backend} delay={100} />
+          <SkillGrid
+            title="Tools, Platforms & Analytics"
+            skills={tools}
+            delay={200}
+          />
         </div>
-        <div className="bg-dark-800/30 rounded-xl p-8 border border-dark-700">
+        <div className="bg-dark-800/30 rounded-xl p-8 border border-dark-700" data-reveal>
           <h3 className="text-2xl font-semibold text-dark-200 mb-6 text-center">
             Professional Strengths
           </h3>

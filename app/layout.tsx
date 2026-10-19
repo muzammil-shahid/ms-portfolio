@@ -114,6 +114,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <body className={`${inter.className} bg-dark-950 text-dark-50 antialiased`}>
+        {/* Without JS, show all scroll-reveal content immediately */}
+        <noscript>
+          <style>{`[data-reveal] { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

@@ -99,7 +99,7 @@ export function Experience() {
   return (
     <section id="experience" className="fold-base">
       <div className="max-w-6xl mx-auto">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             Work <span className="gradient-text">Experience</span>
           </h2>
@@ -109,6 +109,7 @@ export function Experience() {
           {jobs.map((job) => (
             <div
               key={`${job.company}-${job.period}`}
+              data-reveal
               className="relative bg-dark-800/30 rounded-xl p-8 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
             >
               <div className="absolute -left-4 top-8 w-8 h-8 bg-primary-600 rounded-full border-4 border-dark-950 flex items-center justify-center">

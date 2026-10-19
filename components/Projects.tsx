@@ -111,16 +111,18 @@ export function Projects() {
   return (
     <section id="projects" className="fold-base">
       <div className="max-w-6xl mx-auto">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="section-rule" />
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {projects.map((p) => (
+          {projects.map((p, i) => (
             <div
               key={p.title}
+              data-reveal
+              data-reveal-delay={(i % 2) * 100}
               className="bg-dark-800/30 rounded-xl p-8 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
             >
               <div className="flex items-center justify-between mb-4">

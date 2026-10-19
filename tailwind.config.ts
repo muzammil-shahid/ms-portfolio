@@ -38,9 +38,24 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        breathe: {
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.15)" },
+        },
+        pulseSoft: {
+          "0%, 100%": { opacity: "0.35" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
+        "fade-in-up": "fadeInUp 0.7s ease-out backwards",
+        breathe: "breathe 8s ease-in-out infinite",
+        "pulse-soft": "pulseSoft 5s ease-in-out infinite",
         "bounce-slow": "bounce 2s infinite",
       },
     },

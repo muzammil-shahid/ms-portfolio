@@ -32,12 +32,22 @@ const stats = [
 export function AiLeadership() {
   return (
     <section id="ai" className="fold-base relative overflow-hidden">
+      {/* Gradient hairlines framing the fold as a standalone feature band */}
+      <div className="pointer-events-none absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary-500/70 to-transparent animate-pulse-soft" />
+      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500/70 to-transparent animate-pulse-soft [animation-delay:2.5s]" />
+
+      {/* Soft gradient wash over the canvas */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600/[0.05] via-transparent to-purple-600/[0.05]" />
+
+      {/* Fine grid backdrop, fading toward the edges */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_45%,black,transparent)]" />
+
       {/* Decorative background glows */}
-      <div className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl animate-breathe" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-breathe [animation-delay:4s]" />
 
       <div className="max-w-6xl mx-auto relative">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <h2 className="section-title">
             AI meets <span className="gradient-text">Engineering Leadership</span>
           </h2>
@@ -51,9 +61,11 @@ export function AiLeadership() {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-16">
-          {pillars.map(({ icon: Icon, title, body }) => (
+          {pillars.map(({ icon: Icon, title, body }, i) => (
             <div
               key={title}
+              data-reveal
+              data-reveal-delay={i * 100}
               className="group relative p-8 bg-dark-800/40 rounded-xl border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -67,7 +79,10 @@ export function AiLeadership() {
           ))}
         </div>
 
-        <div className="relative rounded-2xl border border-dark-700 bg-gradient-to-r from-primary-600/10 via-dark-800/40 to-purple-600/10 p-8 md:p-10">
+        <div
+          data-reveal
+          className="relative rounded-2xl border border-dark-700 bg-gradient-to-r from-primary-600/10 via-dark-800/40 to-purple-600/10 p-8 md:p-10"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             {stats.map((s) => (
               <div key={s.label}>

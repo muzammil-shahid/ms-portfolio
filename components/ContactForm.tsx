@@ -112,7 +112,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "pending"}
-          className="w-full px-8 py-3 bg-primary-600 hover:bg-primary-700 disabled:bg-primary-800 disabled:cursor-not-allowed text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2"
+          className="btn-primary w-full px-8 py-3 disabled:bg-primary-800 disabled:cursor-not-allowed"
         >
           <Send className="w-5 h-5" />
           {status === "pending" ? "Sending..." : "Send Message"}
