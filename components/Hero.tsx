@@ -51,8 +51,9 @@ export function Hero() {
 
           {/* Supporting line */}
           <p className="body-copy max-w-3xl mx-auto mb-6 animate-fade-in-up [animation-delay:0.4s]">
-            10+ years leading frontend architecture, scaling web performance,
-            and building full-stack applications for global users. Currently,
+            More than a decade leading frontend architecture, scaling web
+            performance, and building full-stack applications for global users.
+            Currently,
             leading a team of 10+ engineers at DigitalOcean, creating
             intuitive, high-impact interfaces that drive tangible business
             outcomes.
