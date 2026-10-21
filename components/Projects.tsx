@@ -1,10 +1,13 @@
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 type Project = {
   type: string;
   status: string;
   title: string;
   href: string;
+  /** Screenshot in public/img/projects (optional) */
+  image?: string;
   description: string;
   tech: string[];
   achievements: string[];
@@ -16,8 +19,9 @@ const projects: Project[] = [
     status: "Production",
     title: "Cloudways Platform",
     href: "https://unified.cloudways.com",
+    image: "/img/projects/cloudways-platform.jpg",
     description:
-      "Designed and developed Cloudways Website and SaaS Platform, worked on frontend to enhance performance and user experience. Delivered a robust, high-availability solution to support seamless cloud hosting management.",
+      "Designed and developed Cloudways Website and SaaS Platform, worked on frontend and Middleware to enhance performance and user experience. Delivered a robust, high-availability solution to support seamless cloud hosting management.",
     tech: [
       "React",
       "TypeScript",
@@ -25,6 +29,7 @@ const projects: Project[] = [
       "Redux",
       "RTK Query",
       "Micro-frontend",
+      "Laravel",
     ],
     achievements: [
       "Improved performance by implementing lazy loading and optimization",
@@ -38,6 +43,7 @@ const projects: Project[] = [
     status: "Live",
     title: "Cloudways Website & Blog",
     href: "https://www.cloudways.com/en/",
+    image: "/img/projects/cloudways-website.jpg",
     description:
       "Developed and launched the official Cloudways website and blog, focusing on a secure, high-performance, and user-friendly online presence. By implementing custom features, enabling multilingual support, and optimizing for strong Core Web Vitals, we boosted user engagement and elevated brand visibility.",
     tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
@@ -53,6 +59,7 @@ const projects: Project[] = [
     status: "Live",
     title: "PureVPN Website & Blog",
     href: "https://www.purevpn.com",
+    image: "/img/projects/purevpn.jpg",
     description:
       "Developed and launched PureVPN's official website and blog, delivering a secure, high-performance website with seamless user experience. Implemented custom features, optimized speed, and ensured mobile responsiveness to enhance engagement and brand visibility.",
     tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
@@ -68,6 +75,7 @@ const projects: Project[] = [
     status: "Live",
     title: "Ivacy Website",
     href: "https://www.ivacy.com",
+    image: "/img/projects/ivacy.jpg",
     description:
       "Developed and launched Ivacy's official website, delivering a secure, high-performance website with seamless user experience. Implemented custom features, optimized speed, and ensured mobile responsiveness to enhance engagement and brand visibility.",
     tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
@@ -77,34 +85,35 @@ const projects: Project[] = [
       "Ensured mobile responsiveness",
     ],
   },
-  {
-    type: "Booking Website",
-    status: "Live",
-    title: "Simply Park and Fly",
-    href: "https://www.simplyparkandfly.co.uk",
-    description:
-      "an official website that serves as a comparison engine for airport parking services across major UK airports. It helps users easily find and book affordable and reliable parking options, such as Meet & Greet/Valet and Park & Ride services.",
-    tech: ["HTML5", "CSS3", "JavaScript", "PHP", "Laravel"],
-    achievements: [
-      "Increased User Engagement & Bookings",
-      "Streamlined Partner Integrations",
-      "Optimized website speed and performance",
-    ],
-  },
-  {
-    type: "Corporate Website",
-    status: "Live",
-    title: "Blossom Nursery & Preschool",
-    href: "https://www.theblossomnursery.com/",
-    description:
-      "Developed Blossom Nursery and Preschool's official website an early childhood education and childcare provider located in the UAE, delivering a secure, high-performance website with seamless user experience.",
-    tech: ["HTML5", "CSS3", "JavaScript", "PHP"],
-    achievements: [
-      "Enhanced brand visibility through modern design",
-      "Optimized website speed and performance",
-      "Ensured mobile responsiveness",
-    ],
-  },
+  // {
+  //   type: "Booking Website",
+  //   status: "Live",
+  //   title: "Simply Park and Fly",
+  //   href: "https://www.simplyparkandfly.co.uk",
+  //   image: "/img/projects/simplyparkandfly.jpg",
+  //   description:
+  //     "an official website that serves as a comparison engine for airport parking services across major UK airports. It helps users easily find and book affordable and reliable parking options, such as Meet & Greet/Valet and Park & Ride services.",
+  //   tech: ["HTML5", "CSS3", "JavaScript", "PHP", "Laravel"],
+  //   achievements: [
+  //     "Increased User Engagement & Bookings",
+  //     "Streamlined Partner Integrations",
+  //     "Optimized website speed and performance",
+  //   ],
+  // },
+  // {
+  //   type: "Corporate Website",
+  //   status: "Live",
+  //   title: "Blossom Nursery & Preschool",
+  //   href: "https://www.theblossomnursery.com/",
+  //   description:
+  //     "Developed Blossom Nursery and Preschool's official website an early childhood education and childcare provider located in the UAE, delivering a secure, high-performance website with seamless user experience.",
+  //   tech: ["HTML5", "CSS3", "JavaScript", "PHP"],
+  //   achievements: [
+  //     "Enhanced brand visibility through modern design",
+  //     "Optimized website speed and performance",
+  //     "Ensured mobile responsiveness",
+  //   ],
+  // },
 ];
 
 export function Projects() {
@@ -113,7 +122,7 @@ export function Projects() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            Featured <span className="gradient-text">Projects</span>
+            A few things I&apos;ve <span className="gradient-text">built</span>.
           </h2>
           <div className="section-rule" />
         </div>
@@ -125,6 +134,22 @@ export function Projects() {
               data-reveal-delay={(i % 2) * 100}
               className="bg-dark-800/30 rounded-xl p-8 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
             >
+              {p.image && (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/snap block rounded-lg overflow-hidden border border-dark-700 mb-6"
+                >
+                  <Image
+                    src={p.image}
+                    alt={`${p.title} screenshot`}
+                    width={1280}
+                    height={720}
+                    className="w-full aspect-video object-cover object-top transition-transform duration-500 group-hover/snap:scale-[1.03]"
+                  />
+                </a>
+              )}
               <div className="flex items-center justify-between mb-4">
                 <span className="px-3 py-1 bg-primary-600/20 text-primary-400 rounded-full text-sm font-medium">
                   {p.type}

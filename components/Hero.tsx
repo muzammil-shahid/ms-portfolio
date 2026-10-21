@@ -60,7 +60,7 @@ export function Hero() {
           </p>
 
           {/* Acquisition highlight badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full border border-primary-500/30 bg-gradient-to-r from-primary-600/10 to-purple-600/10 animate-fade-in-up [animation-delay:0.5s] hover:border-primary-400/60 hover:shadow-lg hover:shadow-primary-500/20">
+          <div className="badge-border-glow inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full border border-primary-500/30 bg-gradient-to-r from-primary-600/10 to-purple-600/10 animate-fade-in-up [animation-delay:0.5s] hover:border-primary-400/60 hover:shadow-lg hover:shadow-primary-500/20">
             <Trophy size={16} className="text-primary-400 shrink-0" />
             <span className="text-sm md:text-base text-dark-200">
               Led Cloudways{" "}
@@ -123,10 +123,10 @@ export function Hero() {
 
       <a
         href="#about"
-        className="absolute bottom-4 left-1/2 ![transform:translateX(-50%)] animate-bounce-slow text-dark-500 hover:text-primary-500 transition-colors duration-300"
+        className="absolute bottom-4 left-1/2 ![transform:translateX(-50%)] text-dark-500 hover:text-primary-500 transition-colors duration-300"
         aria-label="Scroll to About"
       >
-        <ChevronDown size={24} />
+        <ChevronDown size={24} className="animate-scroll-hint" />
       </a>
     </section>
   );

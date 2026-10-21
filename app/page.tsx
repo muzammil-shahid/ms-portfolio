@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { AiLeadership } from "@/components/AiLeadership";
+import { Companies } from "@/components/Companies";
 import { Contact } from "@/components/Contact";
 import { Experience } from "@/components/Experience";
 import { Header } from "@/components/Header";
@@ -15,11 +16,12 @@ export default function Home() {
       <ScrollReveal />
       <Header />
       <Hero />
+      <Companies />
       <About />
-      <AiLeadership />
-      <Experience />
-      <Skills />
       <Projects />
+      <AiLeadership />
+      <Skills />
+      <Experience />
       <Testimonials />
       <Contact />
     </main>

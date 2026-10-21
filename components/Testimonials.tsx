@@ -181,7 +181,7 @@ export function Testimonials() {
             className="btn-outline px-6 py-2.5 text-sm"
           >
             <Linkedin className="w-4 h-4" />
-            View all recommendations on LinkedIn
+            View all recommendations
           </a>
         </div>
       </div>

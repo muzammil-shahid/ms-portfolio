@@ -50,6 +50,10 @@ const config: Config = {
           "0%, 100%": { opacity: "0.35" },
           "50%": { opacity: "1" },
         },
+        scrollHint: {
+          "0%, 100%": { transform: "translateY(0)", opacity: "0.6" },
+          "50%": { transform: "translateY(5px)", opacity: "1" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
@@ -57,6 +61,7 @@ const config: Config = {
         breathe: "breathe 8s ease-in-out infinite",
         "pulse-soft": "pulseSoft 5s ease-in-out infinite",
         "bounce-slow": "bounce 2s infinite",
+        "scroll-hint": "scrollHint 2.4s ease-in-out infinite",
       },
     },
   },

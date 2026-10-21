@@ -1,4 +1,13 @@
-import { Building2, Calendar, MapPin } from "lucide-react";
+"use client";
+
+import {
+  Building2,
+  Calendar,
+  ChevronDown,
+  ChevronUp,
+  MapPin,
+} from "lucide-react";
+import { useState } from "react";
 
 type Job = {
   title: string;
@@ -95,7 +104,11 @@ const jobs: Job[] = [
   },
 ];
 
+const INITIAL_VISIBLE = 2;
+
 export function Experience() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="experience" className="fold-base">
       <div className="max-w-6xl mx-auto">
@@ -106,11 +119,19 @@ export function Experience() {
           <div className="section-rule" />
         </div>
         <div className="space-y-8">
-          {jobs.map((job) => (
+          {jobs.map((job, i) => (
             <div
               key={`${job.company}-${job.period}`}
-              data-reveal
-              className="relative bg-dark-800/30 rounded-xl p-8 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover"
+              // Initial cards use scroll-reveal; collapsed ones stay in the HTML
+              // (crawlable for SEO) and are only hidden visually until expanded
+              {...(i < INITIAL_VISIBLE ? { "data-reveal": true } : {})}
+              className={`relative bg-dark-800/30 rounded-xl p-8 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 card-hover ${
+                i >= INITIAL_VISIBLE
+                  ? expanded
+                    ? "animate-fade-in-up"
+                    : "hidden"
+                  : ""
+              }`}
             >
               <div className="absolute -left-4 top-8 w-8 h-8 bg-primary-600 rounded-full border-4 border-dark-950 flex items-center justify-center">
                 <div className="w-2 h-2 bg-white rounded-full" />
@@ -151,6 +172,26 @@ export function Experience() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="btn-outline px-6 py-2.5 text-sm"
+          >
+            {expanded ? (
+              <>
+                Show less
+                <ChevronUp className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                Show all {jobs.length} roles
+                <ChevronDown className="w-4 h-4" />
+              </>
+            )}
+          </button>
         </div>
       </div>
     </section>
