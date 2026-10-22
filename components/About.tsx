@@ -4,7 +4,7 @@ const highlights = [
   {
     icon: Users,
     title: "Team Leadership",
-    body: "As a proven leader, Successfully led and mentored 10+ engineers at DigitalOcean, driving professional growth and high-quality solution delivery.",
+    body: "Led and mentored a team of 10+ engineers at DigitalOcean, driving professional growth and high-quality solution delivery.",
   },
   {
     icon: Zap,
@@ -39,27 +39,26 @@ export function About() {
               Lead Software Engineer & Technical Leader
             </h3>
             <p className="text-dark-400 leading-relaxed">
-              Results-oriented Information Technology professional with a proven
-              track record since 2015. Possessing comprehensive expertise in
-              developing and deploying full-stack web applications and services,
-              including those currently utilized by leading global companies.
-              Proficient in user-centered design, wireframing, and information
-              architecture, prioritizing usability and simplicity.
+              I&apos;ve been building web applications since 2015. My work spans
+              full-stack applications and services used today by leading global
+              companies, built with a strong bias toward usability and
+              simplicity. My engineering leadership and technical contributions
+              at Cloudways were part of the journey that led to its{" "}
+              <span className="text-dark-200 font-medium">
+                $350M acquisition by DigitalOcean
+              </span>
+              .
             </p>
             <p className="text-dark-400 leading-relaxed">
-              I also served as a Marketing Technologist, effectively bridging the
-              gap between Marketing Operations (MKTOPS) and engineering. In this
-              capacity, I&apos;ve actively contributed to Conversion Rate
-              Optimization (CRO) initiatives and various other business-critical
-              campaigns.
+              Along the way, I&apos;ve also worked as a Marketing Technologist,
+              bridging marketing operations and engineering on Conversion Rate
+              Optimization (CRO) and business-critical campaigns. That
+              experience taught me to own outcomes, not just code.
             </p>
             <p className="text-dark-400 leading-relaxed">
-              I possess robust organizational and leadership skills, refined
-              through direct team lead experience, and excel in fostering
-              collaborative environments through effective communication. A
-              dedicated team player with a passion for continuous learning and
-              professional growth. Away from the keyboard, I enjoy a good game
-              of chess, snooker, or table tennis.
+              I lead through communication and collaboration, and I&apos;m a
+              firm believer in continuous learning. Away from the keyboard,
+              you&apos;ll find me playing chess, snooker, or table tennis.
             </p>
             <a
               href="/Resume-MuzammilShahid.pdf"

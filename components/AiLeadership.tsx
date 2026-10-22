@@ -53,8 +53,8 @@ export function AiLeadership() {
           </h2>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-3xl mx-auto">
-            The best engineering teams don&apos;t just adopt AI — they&apos;re
-            led through it. I combine a decade of hands-on engineering with
+            The best engineering teams don&apos;t just adopt AI. They are led
+            through it. I combine a decade of hands-on engineering with
             leadership that turns AI from a buzzword into shipped, measurable
             outcomes.
           </p>
