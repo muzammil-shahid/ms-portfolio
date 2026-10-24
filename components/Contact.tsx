@@ -11,25 +11,24 @@ export function Contact() {
     <section id="contact" className="fold-base pb-8">
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
-          <h2 className="section-title">
-            <span className="sr-only">Let&apos;s connect.</span>
-            <span aria-hidden="true">
-              Let&apos;s{" "}
-              <span className="word-carousel">
-                <span className="word-carousel-track">
-                  {SWAP_WORDS.map((w) => (
-                    <span key={w}>
-                      <span className="gradient-text">{w}</span>.
-                    </span>
-                  ))}
-                  {/* Clone of the first word for a seamless loop */}
-                  <span>
-                    <span className="gradient-text">{SWAP_WORDS[0]}</span>.
+          {/* Crawler- and screen-reader-facing heading; visual twin below */}
+          <h2 className="sr-only">Let&apos;s connect.</h2>
+          <p aria-hidden="true" className="section-title">
+            Let&apos;s{" "}
+            <span className="word-carousel">
+              <span className="word-carousel-track">
+                {SWAP_WORDS.map((w) => (
+                  <span key={w}>
+                    <span className="gradient-text">{w}</span>.
                   </span>
+                ))}
+                {/* Clone of the first word for a seamless loop */}
+                <span>
+                  <span className="gradient-text">{SWAP_WORDS[0]}</span>.
                 </span>
               </span>
             </span>
-          </h2>
+          </p>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-2xl mx-auto">
             Always happy to talk about engineering leadership, building with AI, or B2B SaaS product strategy.
