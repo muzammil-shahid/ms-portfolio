@@ -122,6 +122,85 @@ body {
   }
 }
 
+/* Vertical word-swap carousel (Contact heading) */
+.word-carousel {
+  display: inline-block;
+  overflow: hidden;
+  clip-path: inset(0); /* hard clip; overflow alone can leak on composited layers */
+  height: 1.2em;
+  line-height: 1.2;
+  /* Pull the window down so the word baseline matches the heading baseline */
+  vertical-align: -0.26em;
+  width: 4.19em; /* fits "connect." (widest word) */
+  animation: word-cycle-width 10s ease-in-out infinite;
+}
+
+.word-carousel-track {
+  display: block;
+  animation: word-cycle 10s ease-in-out infinite;
+}
+
+.word-carousel-track > span {
+  display: block;
+  height: 1.2em;
+  line-height: 1.2;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* 4 words + a clone of the first; each step slides one row (-20%) */
+@keyframes word-cycle {
+  0%,
+  21% {
+    transform: translateY(0);
+  }
+  25%,
+  46% {
+    transform: translateY(-20%);
+  }
+  50%,
+  71% {
+    transform: translateY(-40%);
+  }
+  75%,
+  96% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+/* Window hugs the current word so no gap is left around short words */
+@keyframes word-cycle-width {
+  0%,
+  21% {
+    width: 4.19em; /* connect. */
+  }
+  25%,
+  46% {
+    width: 2.67em; /* build. */
+  }
+  50%,
+  71% {
+    width: 2.35em; /* ship. */
+  }
+  75%,
+  96% {
+    width: 2.36em; /* lead. */
+  }
+  100% {
+    width: 4.19em; /* connect. (loop) */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word-carousel,
+  .word-carousel-track {
+    animation: none;
+  }
+}
+
 @layer components {
   .gradient-text {
     background: linear-gradient(135deg, var(--accent-from), var(--accent-mid));

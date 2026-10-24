@@ -49,7 +49,7 @@ export function AiLeadership() {
       <div className="max-w-6xl mx-auto relative">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            AI meets <span className="gradient-text">Engineering Leadership</span>
+            AI meets <span className="gradient-text">Engineering Leadership</span>.
           </h2>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-3xl mx-auto">

@@ -91,7 +91,7 @@ export function Skills() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            Skills & <span className="gradient-text">Expertise</span>
+            Skills & <span className="gradient-text">Expertise</span>.
           </h2>
           <div className="section-rule" />
         </div>

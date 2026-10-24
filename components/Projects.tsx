@@ -21,7 +21,7 @@ const projects: Project[] = [
     href: "https://unified.cloudways.com",
     image: "/img/projects/cloudways-platform.jpg",
     description:
-      "Designed and developed Cloudways Website and SaaS Platform, worked on frontend and Middleware to enhance performance and user experience. Delivered a robust, high-availability solution to support seamless cloud hosting management.",
+      "Designed and developed the Cloudways Unified Platform, the SaaS console that connects seamlessly with the Cloudways website to carry users from signup through to managing their cloud infrastructure. Worked across the frontend and middleware on a micro-frontend architecture, driving performance, scalability, and user experience. Delivered a robust, high-availability solution trusted for day-to-day cloud hosting management at scale.",
     tech: [
       "React",
       "TypeScript",
@@ -30,12 +30,14 @@ const projects: Project[] = [
       "RTK Query",
       "Micro-frontend",
       "Laravel",
+      "Mixpanel",
+      "Customer.io",
     ],
     achievements: [
-      "Improved performance by implementing lazy loading and optimization",
-      "Led team of 10+ engineers",
-      "Implemented micro frontend architecture",
-      "Migrated legacy AngularJS to modern React",
+      "Architected a micro-frontend platform with module federation, enabling multiple teams to ship independently",
+      "Migrated the legacy AngularJS console to a modern React and TypeScript architecture without disrupting users",
+      "Led a team of 10+ engineers delivering across frontend and middleware",
+      "Boosted load performance through route-level code splitting, lazy loading, and Core Web Vitals optimization",
     ],
   },
   {
@@ -45,13 +47,21 @@ const projects: Project[] = [
     href: "https://www.cloudways.com/en/",
     image: "/img/projects/cloudways-website.jpg",
     description:
-      "Developed and launched the official Cloudways website and blog, focusing on a secure, high-performance, and user-friendly online presence. By implementing custom features, enabling multilingual support, and optimizing for strong Core Web Vitals, we boosted user engagement and elevated brand visibility.",
-    tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
+      "Developed and launched the official Cloudways website and blog on a fully customized WordPress theme, built around Custom Post Types for a flexible content architecture, with multilingual support and strong Core Web Vitals. Engineered the complete marketing funnel end to end, visitors are tracked across the entire journey and identified as users at signup, with behavioral events dispatched to Mixpanel and Customer.io, while Hotjar provides on-page analytics and session insights.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "jQuery",
+      "JavaScript",
+      "WordPress",
+      "PHP",
+      "Hotjar",
+    ],
     achievements: [
-      "Enhanced brand visibility through modern design",
-      "Optimized website speed and performance",
-      "Ensured mobile responsiveness",
-      "Implemented custom security features",
+      "Built a fully customized WordPress theme on Custom Post Types for a flexible, scalable content architecture",
+      "Engineered end-to-end funnel tracking that identifies visitors as users at signup",
+      "Integrated Mixpanel, Customer.io, and Hotjar for behavioral events and session insights",
+      "Delivered multilingual support with strong Core Web Vitals across the site and blog",
     ],
   },
   {
@@ -61,13 +71,13 @@ const projects: Project[] = [
     href: "https://www.purevpn.com",
     image: "/img/projects/purevpn.jpg",
     description:
-      "Developed and launched PureVPN's official website and blog, delivering a secure, high-performance website with seamless user experience. Implemented custom features, optimized speed, and ensured mobile responsiveness to enhance engagement and brand visibility.",
+      "Developed and maintained PureVPN's official website and blog, serving a high-traffic global audience of security-conscious users. Built conversion-focused landing pages for seasonal campaigns and product launches on a custom WordPress stack, resolving cross-browser compatibility issues and keeping every page fast and fully responsive.",
     tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
     achievements: [
-      "Enhanced brand visibility through modern design",
-      "Optimized website speed and performance",
-      "Ensured mobile responsiveness",
-      "Implemented custom security features",
+      "Shipped high-converting landing pages under tight campaign deadlines",
+      "Maintained a high-traffic website and blog serving a global audience",
+      "Resolved cross-browser compatibility issues across legacy and modern browsers",
+      "Kept every page fast and fully responsive on all devices",
     ],
   },
   {
@@ -77,13 +87,13 @@ const projects: Project[] = [
     href: "https://www.ivacy.com",
     image: "/img/projects/ivacy.jpg",
     description:
-      "Developed and launched Ivacy's official website, delivering a secure, high-performance website with seamless user experience. Implemented custom features, optimized speed, and ensured mobile responsiveness to enhance engagement and brand visibility.",
+      "Developed and launched the official website for Ivacy, PureVPN's sister VPN brand, building on a shared WordPress foundation while giving the brand its own distinct identity. Implemented custom theme features, pricing and deal pages, optimized load times, and ensured a fully responsive experience across devices to drive engagement and brand visibility.",
     tech: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"],
-    achievements: [
-      "Enhanced brand visibility through modern design",
-      "Optimized website speed and performance",
-      "Ensured mobile responsiveness",
-    ],
+      achievements: [
+        "Built a custom WordPress theme with distinct branding and features for Ivacy",
+        "Optimized load times and Core Web Vitals for a fast, responsive user experience",
+        "Kept every page fast and fully responsive on all devices",
+      ],
   },
   // {
   //   type: "Booking Website",

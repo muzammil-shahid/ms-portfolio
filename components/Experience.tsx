@@ -114,7 +114,7 @@ export function Experience() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            Work <span className="gradient-text">Experience</span>
+            Where I&apos;ve <span className="gradient-text">worked</span>.
           </h2>
           <div className="section-rule" />
         </div>

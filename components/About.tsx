@@ -4,22 +4,22 @@ const highlights = [
   {
     icon: Users,
     title: "Team Leadership",
-    body: "Led and mentored a team of 10+ engineers at DigitalOcean, driving professional growth and high-quality solution delivery.",
+    body: "Leading a team of 10+ engineers at DigitalOcean, mentoring them toward senior roles while holding a high bar for quality and delivery.",
   },
   {
     icon: Zap,
     title: "Performance Strategist",
-    body: "Streamlined deployments and boosted performance by integrating CI/CD (GitHub Pipelines) and optimizing Core Web Vitals.",
+    body: "Cut release friction with CI/CD pipelines on GitHub Actions and lifted site speed and Google PSI score by improving Core Web Vitals.",
   },
   {
     icon: Award,
     title: "Full-Stack Expertise",
-    body: "10+ years experience in developing web apps, including React, TypeScript, Node.js, PHP, Custom WordPress Development and more.",
+    body: "More than a decade building web applications end to end with React, TypeScript, Node.js, PHP, and deeply customized WordPress.",
   },
   {
     icon: Target,
     title: "Business Impact",
-    body: "Significantly increased sales and user engagement by contributing to Conversion Rate Optimization (CRO) initiatives and key business campaigns.",
+    body: "Drove measurable growth in sales and engagement by pairing engineering with Conversion Rate Optimization experiments and business campaigns.",
   },
 ];
 
@@ -29,7 +29,7 @@ export function About() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            About <span className="gradient-text">Me</span>
+            A bit about <span className="gradient-text">me</span>.
           </h2>
           <div className="section-rule" />
         </div>

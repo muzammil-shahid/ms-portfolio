@@ -94,7 +94,7 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            What People <span className="gradient-text">Say</span>
+            What people <span className="gradient-text">say</span>.
           </h2>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-2xl mx-auto">

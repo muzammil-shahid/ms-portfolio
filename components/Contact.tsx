@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
 const EMAIL = "muzammilshahid.gt@gmail.com";
+const SWAP_WORDS = ["connect", "build", "ship", "lead"];
 const LINKEDIN = "https://www.linkedin.com/in/muzammil09/";
 const GITHUB = "https://github.com/muzammil-shahid";
 
@@ -11,7 +12,23 @@ export function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="section-heading" data-reveal>
           <h2 className="section-title">
-            Let&apos;s <span className="gradient-text">Connect</span>
+            <span className="sr-only">Let&apos;s connect.</span>
+            <span aria-hidden="true">
+              Let&apos;s{" "}
+              <span className="word-carousel">
+                <span className="word-carousel-track">
+                  {SWAP_WORDS.map((w) => (
+                    <span key={w}>
+                      <span className="gradient-text">{w}</span>.
+                    </span>
+                  ))}
+                  {/* Clone of the first word for a seamless loop */}
+                  <span>
+                    <span className="gradient-text">{SWAP_WORDS[0]}</span>.
+                  </span>
+                </span>
+              </span>
+            </span>
           </h2>
           <div className="section-rule mb-6" />
           <p className="body-copy max-w-2xl mx-auto">

@@ -32,7 +32,7 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up [animation-delay:0.1s]">
-            I&apos;m <span className="gradient-text">Muzammil.</span>
+            I&apos;m <span className="gradient-text">Muzammil</span>.
             <span className="sr-only"> Muhammad Muzammil</span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-dark-300 font-light mb-8 animate-fade-in-up [animation-delay:0.2s]">
