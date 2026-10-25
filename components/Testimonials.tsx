@@ -51,6 +51,13 @@ const testimonials: Testimonial[] = [
     profile: "https://www.linkedin.com/in/mirandagahrmann/",
     text: "Muzammil is a great developer and a highly appreciated colleague. He\u2019s approachable, always willing to help, and offers effective solutions to resolve issues. It\u2019s always a pleasure to connect with him.",
   },
+  {
+    name: "Ahmad Kamran",
+    role: "Digital Marketing Manager | SEO & Organic Growth",
+    image: "/img/testimonials/ahmad.jpg",
+    profile: "https://www.linkedin.com/in/ah-kamran/",
+    text: "Muzammil bhai is one of those people you\u2019re just lucky to have around. We don\u2019t even work in the same function, but whenever I need a hand, he\u2019s there... no questions asked. Always positive, always ready to help, and somehow makes even stressful situations feel lighter. An all-rounder and a real champ to work with.",
+  },
 ];
 
 // Cards are rendered twice so the track can wrap around seamlessly
