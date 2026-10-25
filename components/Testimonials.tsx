@@ -44,6 +44,13 @@ const testimonials: Testimonial[] = [
     profile: "https://www.linkedin.com/in/hoor-durrani-8359a116a/",
     text: "What I really liked about Muzammil was his humble attitude and his strong work ethic. He was always ready to help anyone, whether they were new to the job or part of a different team. He was really good at solving problems and would quickly help us figure things out.\n\nAny company would be lucky to have Muzammil. He's a skilled engineer, but even more, he's the kind of person who helps everyone around him get better. He would be a huge asset to any team.",
   },
+  {
+    name: "Miranda Gahrmann",
+    role: "Digital Marketing | AI | Enterprise SEO | Technical SEO",
+    image: "/img/testimonials/miranda.jpg",
+    profile: "https://www.linkedin.com/in/mirandagahrmann/",
+    text: "Muzammil is a great developer and a highly appreciated colleague. He\u2019s approachable, always willing to help, and offers effective solutions to resolve issues. It\u2019s always a pleasure to connect with him.",
+  },
 ];
 
 // Cards are rendered twice so the track can wrap around seamlessly
@@ -108,6 +115,24 @@ export function Testimonials() {
           onMouseEnter={() => (pausedRef.current = true)}
           onMouseLeave={() => (pausedRef.current = false)}
         >
+          <div className="hidden md:flex items-center justify-end gap-3 mb-4">
+            <button
+              type="button"
+              onClick={() => scroll(-1)}
+              aria-label="Previous testimonials"
+              className="w-10 h-10 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll(1)}
+              aria-label="Next testimonials"
+              className="w-10 h-10 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
           <div
             ref={trackRef}
             onScroll={handleScroll}
@@ -153,24 +178,6 @@ export function Testimonials() {
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
-              type="button"
-              onClick={() => scroll(-1)}
-              aria-label="Previous testimonials"
-              className="w-10 h-10 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll(1)}
-              aria-label="Next testimonials"
-              className="w-10 h-10 rounded-full border border-dark-600 text-dark-300 hover:border-primary-500 hover:text-primary-400 transition-colors duration-300 flex items-center justify-center"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
         </div>
 
         <div className="text-center mt-10" data-reveal>
